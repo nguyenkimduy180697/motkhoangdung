@@ -3,7 +3,7 @@ import { gifts } from '@/data/gifts';
 
 export default function Gifts() {
   return (
-    <section className="relative overflow-hidden bg-peachnum">
+    <section id="qua-tang" className="relative overflow-hidden bg-peachnum">
       {/* Decorative outline circles */}
       <div
         className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full border-[3px] border-terracotta/30 select-none"

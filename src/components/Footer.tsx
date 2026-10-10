@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Mail } from 'lucide-react';
+import { Mail, Heart } from 'lucide-react';
 import { teamMembers } from '@/data/team';
 import { partners, mediaPartners } from '@/data/partners';
 
@@ -128,6 +128,63 @@ export default function Footer() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Bottom Footer Bar */}
+        <div className="mt-16 border-t border-white/20 pt-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            {/* Left: Brand summary */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/logo-mkd.png"
+                  alt="Một Khoảng Dừng Logo"
+                  width={120}
+                  height={50}
+                  className="h-10 w-auto brightness-0 invert object-contain"
+                />
+                <span className="font-display font-bold text-lg text-peach">
+                  Một Khoảng Dừng 2026
+                </span>
+              </div>
+              <p className="text-sm text-white/70 max-w-md">
+                Cha Mẹ vững chãi – Con Trẻ an lành · Diễn ra trực tuyến vào 10 &amp; 11/10/2026 trên Zoom.
+              </p>
+            </div>
+
+            {/* Right: Quick Links */}
+            <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
+              <a href="#gioi-thieu" className="hover:text-peach transition-colors">
+                Giới thiệu
+              </a>
+              <a href="#dien-gia" className="hover:text-peach transition-colors">
+                Diễn giả
+              </a>
+              <a href="#lich-trinh" className="hover:text-peach transition-colors">
+                Lịch trình
+              </a>
+              <a href="#qua-tang" className="hover:text-peach transition-colors">
+                Quà tặng
+              </a>
+              <a href="#cam-nhan" className="hover:text-peach transition-colors">
+                Cảm nhận
+              </a>
+              <a href="#dang-ky" className="hover:text-peach transition-colors font-semibold text-peach">
+                Đăng ký
+              </a>
+            </nav>
+          </div>
+
+          {/* Copyright & Disclaimer */}
+          <div className="mt-8 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
+            <p>
+              © 2026 Một Khoảng Dừng. Tổ chức bởi Ban Dự Án Cha Mẹ Trắc Ẩn Việt Nam (MCP).
+            </p>
+            <p className="flex items-center gap-1.5">
+              <span>Được xây dựng với sự thấu cảm &amp; trân trọng</span>
+              <Heart className="h-3.5 w-3.5 text-terracotta fill-terracotta inline" />
+            </p>
           </div>
         </div>
       </div>

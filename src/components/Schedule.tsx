@@ -6,7 +6,7 @@ export default function Schedule() {
   const day2 = scheduleDays[1];
 
   return (
-    <section className="bg-cream">
+    <section id="lich-trinh" className="bg-cream">
       <div className="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
         <div className="reveal visible">
           {/* Header */}

@@ -3,7 +3,7 @@ import { speakers } from '@/data/speakers';
 
 export default function Speakers() {
   return (
-    <section className="bg-peach">
+    <section id="dien-gia" className="bg-peach">
       <div className="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
         <div className="reveal visible">
           <h2 className="text-center font-display text-3xl font-bold text-teal sm:text-4xl">

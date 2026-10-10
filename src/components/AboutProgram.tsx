@@ -2,7 +2,7 @@ import { Laptop, Calendar, Heart, X, Check } from 'lucide-react';
 
 export default function AboutProgram() {
   return (
-    <section className="bg-peach">
+    <section id="gioi-thieu" className="bg-peach">
       <div className="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
         <div className="reveal visible">
           <h2 className="mb-10 text-center font-display text-2xl font-bold text-teal sm:text-3xl">

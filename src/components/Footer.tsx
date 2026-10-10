@@ -72,7 +72,7 @@ export default function Footer() {
                 alt="Logo Cha mẹ Trắc ẩn"
                 width={80}
                 height={32}
-                className="h-8 w-auto shrink-0 sm:h-10 brightness-0 invert object-contain"
+                className="h-8 w-auto shrink-0 sm:h-10 object-contain"
               />
               <span className="font-display font-semibold">Cha mẹ Trắc ẩn</span>
             </a>
@@ -144,7 +144,7 @@ export default function Footer() {
                   alt="Một Khoảng Dừng Logo"
                   width={120}
                   height={50}
-                  className="h-10 w-auto brightness-0 invert object-contain"
+                  className="h-10 w-auto object-contain"
                 />
                 <span className="font-display font-bold text-lg text-peach">
                   Một Khoảng Dừng 2026

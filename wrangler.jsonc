@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "motkhoangdung-web",
+  "compatibility_date": "2026-10-10",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "motkhoangdung.nguyenkimduy.io.vn",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

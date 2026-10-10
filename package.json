@@ -1,0 +1,13 @@
+{
+  "name": "motkhoangdung",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/build.mjs && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.100.0"
+  }
+}

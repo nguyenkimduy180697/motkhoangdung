@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Một Khoảng Dừng 2026 - Cha Mẹ vững chãi, Con Trẻ an lành</title>
+  <meta name="description" content="Chuỗi hội thảo trực tuyến miễn phí cho cha mẹ &amp; người chăm sóc trẻ, 10 &amp; 11/10/2026 trên Zoom. Một khoảng dừng để chậm lại, tự chăm sóc và kết nối."/>
+  <meta name="author" content="Cha Mẹ Trắc Ẩn Việt Nam"/>
+  <meta property="og:title" content="Một Khoảng Dừng 2026 - Cha Mẹ vững chãi, Con Trẻ an lành"/>
+  <meta property="og:description" content="Chuỗi hội thảo trực tuyến miễn phí cho cha mẹ &amp; người chăm sóc trẻ, 10 &amp; 11/10/2026 trên Zoom."/>
+  <meta property="og:image" content="./images/og-speakers.jpg"/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Preload key images -->
+  <link rel="preload" as="image" href="./images/logo-mkd.png"/>
+  <link rel="preload" as="image" href="./images/brochure.png"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF6EF',
+            peach: '#F5D9C0',
+            peachnum: '#E8C4A0',
+            teal: '#3B7D73',
+            'teal-dark': '#2d6159',
+            terracotta: '#B85C38',
+            'terracotta-deep': '#9A4A2C',
+            ink: '#4A3F35',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Be Vietnam Pro"', 'sans-serif'],
+            poster: ['Lora', 'serif'],
+          },
+          borderRadius: {
+            'blob': '45% 55% 70% 30% / 45% 45% 60% 55%',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #FDF6EF; color: #4A3F35; overflow-x: hidden; }
+
+    /* Custom utility classes */
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Be Vietnam Pro', sans-serif; }
+    .font-poster { font-family: 'Lora', serif; }
+
+    .btn-cta {
+      display: inline-block;
+      background-color: #B85C38;
+      color: white;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-cta:hover {
+      background-color: #9A4A2C;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(184,92,56,0.35);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Blob shape */
+    .blob-shape {
+      border-radius: 45% 55% 70% 30% / 45% 45% 60% 55%;
+    }
+
+    /* Speaker grid */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Testimonial carousel */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .carousel-slide {
+      min-width: 100%;
+    }
+
+    /* Schedule timeline */
+    .schedule-item {
+      border-top: 1px solid rgba(74,63,53,0.15);
+      border-bottom: 1px solid rgba(74,63,53,0.15);
+    }
+    .schedule-item + .schedule-item {
+      border-top: none;
+    }
+
+    /* Pain points table */
+    table { border-collapse: collapse; width: 100%; }
+    th, td {
+      text-align: left;
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid rgba(74,63,53,0.12);
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+    th {
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: #3B7D73;
+      background-color: rgba(59,125,115,0.07);
+    }
+    td:first-child { color: #4A3F35; }
+    td:last-child { color: rgba(74,63,53,0.65); }
+    @media (max-width: 640px) {
+      th, td { padding: 0.625rem 0.75rem; font-size: 0.875rem; }
+    }
+
+    /* Flower bullet */
+    .flower-bullet::before {
+      content: '✿';
+      color: #B85C38;
+      margin-right: 0.5rem;
+    }
+
+    /* NOT/IS cards */
+    .not-card { background: rgba(184,92,56,0.07); border-left: 3px solid #B85C38; }
+    .is-card  { background: rgba(59,125,115,0.07); border-left: 3px solid #3B7D73; }
+
+    /* Gift card hover */
+    .gift-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .gift-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(74,63,53,0.12); }
+
+    /* Partner logos grayscale hover */
+    .partner-logo { filter: grayscale(0.4); opacity: 0.8; transition: filter 0.2s, opacity 0.2s; }
+    .partner-logo:hover { filter: grayscale(0); opacity: 1; }
+
+    /* Pricing cards */
+    .price-card {
+      border-radius: 28px;
+      background: white;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(74,63,53,0.08);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; opacity: 1; transform: none; }
+      .carousel-track { transition: none; }
+      .btn-cta { transition: none; }
+    }
+  </style>
+</head>
+<body class="bg-cream">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="bg-cream border-b border-ink/10 sticky top-0 z-50">
+    <div class="mx-auto max-w-5xl px-5 sm:px-8">
+      <div class="flex items-center justify-between py-3 gap-4 flex-wrap">
+        <div class="flex items-center gap-5 sm:gap-8 flex-wrap">
+          <img src="./images/logo-mkd.png" alt="Một Khoảng Dừng" class="h-14 sm:h-16 w-auto object-contain"/>
+          <img src="./images/logo-mcp.png" alt="Cha Mẹ Trắc Ẩn Việt Nam" class="h-9 sm:h-11 w-auto object-contain"/>
+          <img src="./images/lean-in-vietnam.png" alt="Lean In VietNam" class="h-9 sm:h-11 w-auto object-contain hidden sm:block"/>
+          <img src="./images/pisel.png" alt="PiSEL" class="h-9 sm:h-11 w-auto object-contain hidden sm:block"/>
+        </div>
+        <a href="https://luma.com/2partqi8" target="_blank" rel="noopener noreferrer"
+           class="btn-cta px-5 py-2.5 text-sm whitespace-nowrap">Đăng ký ngay</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="bg-cream py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <div class="grid gap-12 sm:grid-cols-2 items-center">
+          <!-- Left: text -->
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-terracotta/80 mb-4">
+              Chuỗi hội thảo trực tuyến không thu phí · Dành cho cha mẹ &amp; người chăm sóc trẻ
+            </p>
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-black leading-none text-teal">
+              MỘT<br/>KHOẢNG<br/>DỪNG<br/>
+              <span class="text-terracotta">2026</span>
+            </h1>
+            <p class="mt-5 font-poster text-xl italic text-ink/70">
+              Cha Mẹ vững chãi – Con Trẻ an lành
+            </p>
+            <!-- Badges -->
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full bg-peach px-4 py-2 text-sm font-semibold text-ink">
+                <i class="fa-solid fa-calendar text-terracotta" aria-hidden="true"></i>
+                10 &amp; 11/10/2026
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-peach px-4 py-2 text-sm font-semibold text-ink">
+                <i class="fa-solid fa-laptop text-terracotta" aria-hidden="true"></i>
+                Zoom
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-white">
+                <i class="fa-solid fa-gift" aria-hidden="true"></i>
+                Miễn phí
+              </span>
+            </div>
+            <div class="mt-8">
+              <a href="https://luma.com/2partqi8" target="_blank" rel="noopener noreferrer"
+                 class="btn-cta px-10 py-4 text-base">Đăng ký giữ chỗ ngay</a>
+            </div>
+          </div>
+          <!-- Right: brochure -->
+          <div class="flex justify-center">
+            <div class="blob-shape overflow-hidden bg-peach w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center shadow-[0_20px_60px_rgba(184,92,56,0.2)]">
+              <img src="./images/brochure.png" alt="Một Khoảng Dừng 2026 - Brochure"
+                   class="w-full h-full object-cover object-center"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PAIN POINTS ===================== -->
+    <section class="bg-cream py-16 sm:py-20 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal max-w-2xl leading-snug">
+          Làm cha mẹ giữa những bộn bề của cuộc sống, có khi nào bạn nhận ra...
+        </h2>
+        <div class="mt-10 overflow-x-auto rounded-2xl shadow-[0_8px_32px_rgba(74,63,53,0.08)]">
+          <table>
+            <thead>
+              <tr>
+                <th>Điều mình mong muốn</th>
+                <th>Nhưng thực tế là</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bình tĩnh, dịu dàng với con</td>
+                <td>Dễ nổi cáu hơn mình muốn</td>
+              </tr>
+              <tr>
+                <td>Thực sự có mặt cùng con</td>
+                <td>Ngồi cạnh nhau mà tâm trí ở nơi khác</td>
+              </tr>
+              <tr>
+                <td>Hiểu con và kết nối sâu hơn</td>
+                <td>Cảm thấy xa cách, không biết bắt đầu từ đâu</td>
+              </tr>
+              <tr>
+                <td>Nghỉ ngơi và chăm sóc bản thân</td>
+                <td>Luôn cảm thấy chưa làm đủ, chưa đủ tốt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote class="mt-10 border-l-4 border-terracotta pl-6 py-2">
+          <p class="font-poster text-xl italic text-ink/75 leading-relaxed">
+            Làm cha mẹ vốn là một hành trình đầy ý nghĩa nhưng cũng không ít thử thách.
+          </p>
+          <p class="font-poster text-xl italic text-ink/75 leading-relaxed mt-2">
+            Và bạn không đơn độc trên hành trình này.
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT PROGRAM ===================== -->
+    <section class="bg-peach py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal text-center">
+          Chuỗi hội thảo "Một Khoảng Dừng"
+        </h2>
+
+        <!-- 3 feature icons -->
+        <div class="mt-12 grid gap-8 sm:grid-cols-3">
+          <div class="text-center">
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-teal/10">
+              <i class="fa-solid fa-laptop text-2xl text-teal" aria-hidden="true"></i>
+            </div>
+            <p class="text-ink/80 leading-relaxed text-sm">Là chuỗi hội thảo trực tuyến không thu phí</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-teal/10">
+              <i class="fa-solid fa-calendar text-2xl text-teal" aria-hidden="true"></i>
+            </div>
+            <p class="text-ink/80 leading-relaxed text-sm">Diễn ra hàng năm do đội ngũ Cha Mẹ Trắc Ẩn Việt Nam (MCP) tổ chức</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-teal/10">
+              <i class="fa-solid fa-heart text-2xl text-teal" aria-hidden="true"></i>
+            </div>
+            <p class="text-ink/80 leading-relaxed text-sm">Tạo ra một không gian để ba mẹ được tạm ngừng lại giữa cuộc sống bận rộn để được là chính mình, được hiện diện, được chăm sóc, được thấu hiểu.</p>
+          </div>
+        </div>
+
+        <!-- NOT / IS cards -->
+        <div class="mt-16 grid gap-6 sm:grid-cols-2">
+          <!-- NOT -->
+          <div class="rounded-2xl bg-white/60 p-6 sm:p-8 shadow-[0_8px_24px_rgba(74,63,53,0.08)]">
+            <h3 class="font-display text-lg font-bold text-terracotta mb-4">Không phải là:</h3>
+            <ul class="space-y-3 text-ink/75 text-sm leading-relaxed">
+              <li class="flex gap-3"><span class="text-terracotta font-bold mt-0.5">✕</span> Hội thảo để bạn học thêm kỹ năng nuôi dạy con</li>
+              <li class="flex gap-3"><span class="text-terracotta font-bold mt-0.5">✕</span> Những lý thuyết xa vời, khó áp dụng</li>
+              <li class="flex gap-3"><span class="text-terracotta font-bold mt-0.5">✕</span> Nơi bạn về với danh sách dài hơn cần làm</li>
+              <li class="flex gap-3"><span class="text-terracotta font-bold mt-0.5">✕</span> Con đường trở thành cha mẹ hoàn hảo</li>
+            </ul>
+          </div>
+          <!-- IS -->
+          <div class="rounded-2xl bg-teal/10 p-6 sm:p-8 shadow-[0_8px_24px_rgba(59,125,115,0.12)]">
+            <h3 class="font-display text-lg font-bold text-teal mb-4">Mà là:</h3>
+            <ul class="space-y-3 text-ink/80 text-sm leading-relaxed">
+              <li class="flex gap-3"><span class="text-teal font-bold mt-0.5">✓</span> Không gian để bạn thực sự dừng lại - hít thở, lắng nghe chính mình</li>
+              <li class="flex gap-3"><span class="text-teal font-bold mt-0.5">✓</span> Góc nhìn thực tiễn từ tâm lý học, giáo dục, tỉnh thức và trải nghiệm sống</li>
+              <li class="flex gap-3"><span class="text-teal font-bold mt-0.5">✓</span> Cảm giác được thấu hiểu - và nhận ra mình không đơn độc</li>
+              <li class="flex gap-3"><span class="text-teal font-bold mt-0.5">✓</span> Những thực hành nhỏ có thể mang về áp dụng ngay trong cuộc sống hàng ngày</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Closing quote -->
+        <div class="mt-14 text-center">
+          <p class="font-poster text-lg sm:text-xl italic text-ink/60">
+            điều con trẻ cần chưa bao giờ là những người cha mẹ hoàn hảo
+          </p>
+          <p class="font-poster text-lg sm:text-xl italic text-ink/60">
+            mà là sự hiện diện an ổn của bạn.
+          </p>
+          <p class="mt-6 font-poster text-xl sm:text-2xl italic text-teal font-semibold">
+            Khi cha mẹ có một khoảng dừng, con trẻ sẽ có thêm một điểm tựa.
+          </p>
+          <p class="font-poster text-xl sm:text-2xl italic text-teal font-semibold">
+            Khi cha mẹ vững chãi, con trẻ sẽ an lành.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOR WHOM ===================== -->
+    <section class="bg-cream py-16 sm:py-20 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal">
+            "Một Khoảng Dừng" dành cho bạn nếu...
+          </h2>
+          <ul class="mt-8 space-y-4">
+            <li class="flower-bullet text-ink/85 leading-relaxed">Bạn là cha mẹ - dù con còn nhỏ hay đã lớn</li>
+            <li class="flower-bullet text-ink/85 leading-relaxed">Bạn là thầy cô, người làm giáo dục, người chăm sóc trẻ</li>
+            <li class="flower-bullet text-ink/85 leading-relaxed">Bạn đang chăm sóc trẻ có nhu cầu đặc biệt và cần thêm sự nâng đỡ</li>
+            <li class="flower-bullet text-ink/85 leading-relaxed">Bạn quan tâm đến sức khỏe tinh thần - của chính mình và của gia đình</li>
+          </ul>
+          <p class="mt-8 text-ink/65 leading-relaxed">Chỉ cần bạn sẵn sàng dành hai ngày cho chính mình.</p>
+          <p class="text-ink/65 leading-relaxed">Chỉ cần bạn mong muốn kết nối và học hỏi từ những người tin rằng "cha mẹ vững chãi, con trẻ an lành".</p>
+          <div class="mt-8">
+            <a href="https://luma.com/2partqi8" target="_blank" rel="noopener noreferrer"
+               class="btn-cta px-10 py-4 text-base">Đăng ký ngay - miễn phí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPEAKERS ===================== -->
+    <section class="bg-peach py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal text-center">
+          Bạn sẽ được đồng hành bởi các diễn giả
+        </h2>
+        <div class="mt-12 speakers-grid">
+
+          <!-- Speaker 1: Jörg Mangold -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-jorg.png" alt="Jörg Mangold"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">Jörg Mangold</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Bác sĩ tâm thần trẻ em và thanh thiếu niên, Nhà trị liệu tâm lý gia đình, Nhà sáng lập chương trình Cha mẹ Trắc ẩn (MCP™) - đã phổ biến tại hơn 10 quốc gia.
+            </p>
+          </article>
+
+          <!-- Speaker 2: TS. Bùi Trân Phượng -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-phuong.jpg" alt="TS. Bùi Trân Phượng"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">TS. Bùi Trân Phượng</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Nhà giáo dục, Nguyên Hiệu trưởng Trường Đại học Hoa Sen, Tiến sĩ Lịch sử tại Đại học Lyon II (Pháp), Top 50 Phụ nữ ảnh hưởng nhất Việt Nam 2017 do Forbes vinh danh.
+            </p>
+          </article>
+
+          <!-- Speaker 3: Paola Bortini -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-paola.jpeg" alt="Paola Bortini"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">Paola Bortini</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Điều phối viên Mạng lưới MCP Quốc tế, Đồng sáng lập và đồng giám đốc Viện LIMINA (Áo), Chuyên gia đào tạo và giảng viên các chương trình tỉnh thức.
+            </p>
+          </article>
+
+          <!-- Speaker 4: Peter Hofmann -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-peter.jpg" alt="Peter Hofmann"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">Peter Hofmann</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Điều phối viên của Mạng lưới MCP Quốc tế, Đồng sáng lập và đồng giám đốc Viện LIMINA tại Vienna (Áo), hơn 25 năm kinh nghiệm đào tạo quốc tế về tỉnh thức và trắc ẩn.
+            </p>
+          </article>
+
+          <!-- Speaker 5: Chiêu Anh -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-chieu-anh.jpg" alt="ThS. Nguyễn Hoàng Chiêu Anh"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">ThS. Nguyễn Hoàng Chiêu Anh</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Quản lý chương trình Trường học Hạnh Phúc phía Nam, Nhà giáo, Giám đốc chuyên môn Cộng đồng Harmony SEL Việt Nam.
+            </p>
+          </article>
+
+          <!-- Speaker 6: Kim Chi -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-kim-chi.jpg" alt="ThS. Phạm Trần Kim Chi"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">ThS. Phạm Trần Kim Chi</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Thạc sĩ Tâm lý học tích cực, Giảng viên đại học, Co-Founder WEKAN, Dịch giả – Tác giả sách, Nguyên Co-Founder chuỗi mầm non Montessori BeeBlue House.
+            </p>
+          </article>
+
+          <!-- Speaker 7: Minh Trang -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-minh-trang.jpg" alt="ThS. Trần Thị Minh Trang"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">ThS. Trần Thị Minh Trang</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Giám đốc Điều hành Heart &amp; Mind Education, Đồng sáng lập Trường Mầm non EIJIKO, Cựu Tổng Giám đốc Japan Circle.
+            </p>
+          </article>
+
+          <!-- Speaker 8: Ngọc Mai -->
+          <article class="rounded-3xl bg-white p-6 shadow-[0_8px_24px_rgba(74,63,53,0.08)] flex flex-col">
+            <img src="./images/speaker-ngoc-mai.jpg" alt="Đào Thị Ngọc Mai"
+                 class="h-36 w-36 rounded-full object-cover object-top mx-auto border-4 border-peach shadow-md" loading="lazy"/>
+            <h3 class="mt-4 font-display text-lg font-bold text-teal text-center">Đào Thị Ngọc Mai</h3>
+            <p class="mt-2 text-sm text-ink/65 text-center leading-relaxed flex-1">
+              Sáng lập dự án Cha mẹ Trắc ẩn Việt Nam, Nghiên cứu sinh tiến sĩ tâm lý tại RMIT (Úc), Dịch giả sách "Trắc Ẩn Với Chính Mình".
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SCHEDULE ===================== -->
+    <section class="bg-cream py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-terracotta/70 text-center">Lịch trình dự kiến</p>
+        <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold text-teal text-center">Lịch trình hai ngày</h2>
+
+        <!-- Saturday -->
+        <div class="mt-12">
+          <div class="mb-6 rounded-2xl bg-teal px-6 py-4 text-white">
+            <p class="font-display text-xl font-bold">Thứ Bảy — 10/10</p>
+            <p class="text-sm text-white/70 mt-0.5">14:30 – 16:30</p>
+          </div>
+          <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+            <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">00</span>
+            <div class="flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">Jörg Mangold · Paola Bortini · Peter Hofmann</p>
+              <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Làm cha mẹ giữa căng thẳng, kỳ vọng và yêu thương</h3>
+              <p class="mt-1 text-sm text-terracotta/80 font-medium">Giá trị của tỉnh thức và trắc ẩn trong hành trình làm cha mẹ</p>
+              <p class="mt-2 text-sm text-ink/60 leading-relaxed">Làm cha mẹ không chỉ có những khoảnh khắc dịu dàng mà còn có áp lực, kỳ vọng và những lúc mình không còn nhận ra chính mình...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunday -->
+        <div class="mt-10">
+          <div class="mb-6 rounded-2xl bg-terracotta px-6 py-4 text-white">
+            <p class="font-display text-xl font-bold">Chủ Nhật — 11/10</p>
+          </div>
+
+          <!-- Sessions -->
+          <div id="schedule-list">
+            <!-- 01 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">01</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">08:30 – 10:00 · TS. Bùi Trân Phượng</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Hiểu và thương</h3>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Hiểu bằng trái tim. Thương bằng sự hiện diện...</p>
+              </div>
+            </div>
+            <!-- 02 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">02</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">10:30 – 12:00 · ThS. Nguyễn Hoàng Chiêu Anh</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Con dậy thì, cha mẹ "dậy sóng"</h3>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Khi con đóng cửa phòng, khi một câu nói vô tình trở thành "mồi lửa"...</p>
+              </div>
+            </div>
+            <!-- 03 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">03</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">12:30 – 13:30 · Team MCP Vietnam</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Lắng nghe cơ thể với lòng trắc ẩn</h3>
+                <p class="mt-1 text-sm text-terracotta/80 font-medium">Compassionate Body Scan</p>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Giữa một ngày dài, cơ thể là nơi chúng ta ít ghé thăm nhất...</p>
+              </div>
+            </div>
+            <!-- 04 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">04</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">14:00 – 15:30 · ThS. Phạm Trần Kim Chi</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Bị "kẹp" giữa cha mẹ và con cái</h3>
+                <p class="mt-1 text-sm text-terracotta/80 font-medium">Làm sao để thoát ra?</p>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Làm cha mẹ, đôi khi chúng ta sống ở giữa hai thế hệ...</p>
+              </div>
+            </div>
+            <!-- 05 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">05</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">16:00 – 17:30 · ThS. Trần Thị Minh Trang</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Cùng con vững chãi</h3>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Vững chãi không có nghĩa là không bao giờ lung lay...</p>
+              </div>
+            </div>
+            <!-- 06 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">06</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">18:00 – 19:30 · Paola Bortini, Peter Hofmann &amp; Lucas, Simone</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Tỉnh thức và trắc ẩn trong nuôi dạy con</h3>
+                <p class="mt-1 text-sm text-terracotta/80 font-medium">Câu chuyện từ chính cuộc sống</p>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Một cuộc trò chuyện chân thật, giữa những người đã sống với tỉnh thức và trắc ẩn...</p>
+              </div>
+            </div>
+            <!-- 07 -->
+            <div class="schedule-item px-2 py-6 sm:px-4 flex gap-6 items-start">
+              <span class="font-display text-6xl sm:text-7xl font-black text-teal/10 leading-none select-none hidden sm:block">07</span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wider text-terracotta/70 mb-1">20:00 – 21:30 · Team MCP Vietnam 🍹</p>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-teal">Mừng hành trình làm cha mẹ</h3>
+                <p class="mt-2 text-sm text-ink/60 leading-relaxed">Kết thúc chuỗi hội thảo, chúng ta cùng nhau ăn mừng...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GIFTS ===================== -->
+    <section class="py-16 sm:py-24 reveal" style="background-color:#E8C4A0;">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-terracotta/70 text-center">Dành tặng người tham dự</p>
+        <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold text-teal text-center">Quà tặng từ chương trình</h2>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-vus.png" alt="Học bổng + Balo VUS" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Học bổng + Balo VUS</p>
+          </div>
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-gumac.png" alt="Voucher mua hàng GUMAC" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Voucher mua hàng tại GUMAC</p>
+          </div>
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-beone.png" alt="Học bổng Be One" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Học bổng Be One</p>
+          </div>
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-book-wounds.png" alt="Sách Những vết thương lành?" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Sách "Những vết thương lành?"</p>
+          </div>
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-book-compassion.png" alt="Sách Trắc ẩn với chính mình" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Sách "Trắc ẩn với chính mình"</p>
+          </div>
+
+          <div class="gift-card rounded-2xl bg-white p-6 shadow-[0_8px_20px_rgba(74,63,53,0.08)] flex flex-col items-center text-center">
+            <img src="./images/gift-course-handbook.png" alt="Voucher khóa học + Sổ tay" class="h-40 object-contain" loading="lazy"/>
+            <p class="mt-4 font-display text-base font-bold text-teal">Voucher khóa học + "Sổ tay Cha mẹ trắc ẩn"</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="bg-peach py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal text-center max-w-2xl mx-auto">
+          Những người đã tham gia các hoạt động của Cha mẹ Trắc ẩn chia sẻ…
+        </h2>
+
+        <!-- Carousel -->
+        <div class="mt-12 relative overflow-hidden" id="testimonials-carousel">
+          <div class="carousel-track" id="carousel-track">
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Điều mình học được … giúp mình biết cách dừng lại và quay về đáp ứng nhu cầu của mình trước khi để phản ứng đi quá xa."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Ngọc Ánh</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Tôi cảm thấy mình ưu tiên sự bình an trong nội tâm của mình và niềm vui của con hơn. Từ đó, mình sẽ vững vàng hơn khi đối diện với những khó khăn và áp lực cuộc sống."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Thanh Hà</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Tôi học được rằng việc chăm sóc bản thân không phải là ích kỷ - đó là nền tảng để tôi có thể chăm sóc con mình tốt hơn."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Anh Minh Tuấn</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Chương trình đã giúp tôi nhận ra rằng mọi cảm xúc đều có lý do tồn tại. Thay vì đấu tranh với bản thân, tôi học cách lắng nghe và thấu hiểu chính mình hơn."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Lan Phương</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Tôi bắt đầu hiểu tại sao mình phản ứng như vậy trong những lúc khó khăn. Và từ hiểu biết đó, tôi có thể chọn lựa cách phản ứng khác nhau."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Thu Hương</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Được tham gia cộng đồng những cha mẹ cùng chung mục tiêu đã cho tôi cảm giác không còn đơn độc trong hành trình nuôi dạy con."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Anh Văn Khoa</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Những thực hành nhỏ mà tôi học được từ MCP đã dần dần thay đổi cách tôi tương tác với con. Không phải hoàn hảo, nhưng có ý thức hơn nhiều."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Diễm My</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="carousel-slide px-1 sm:px-2">
+              <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-[0_12px_32px_rgba(74,63,53,0.1)]">
+                <p class="font-poster text-xl italic text-terracotta leading-relaxed">
+                  "Khoảng dừng mà tôi tìm thấy trong chương trình này đã trở thành điểm tựa cho cả gia đình. Khi mình vững, con cũng cảm nhận được sự an toàn đó."
+                </p>
+                <p class="mt-6 font-semibold text-teal">— Chị Bích Ngọc</p>
+                <p class="text-sm text-ink/50">Học viên MCP Vietnam</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navigation -->
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <button id="prev-btn" aria-label="Testimonial trước"
+                    class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-teal text-teal hover:bg-teal hover:text-white transition-colors cursor-pointer">
+              <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+            </button>
+            <div id="dots" class="flex gap-2"></div>
+            <button id="next-btn" aria-label="Testimonial tiếp theo"
+                    class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-teal text-teal hover:bg-teal hover:text-white transition-colors cursor-pointer">
+              <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REGISTRATION ===================== -->
+    <section class="bg-cream py-16 sm:py-24 reveal">
+      <div class="mx-auto max-w-5xl px-5 sm:px-8">
+        <div class="text-center">
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-teal">Tham dự hoàn toàn miễn phí</h2>
+          <p class="mt-3 text-ink/65">Chúng tôi muốn không gian này mở ra cho tất cả mọi người.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
+          <!-- Card 1: Live -->
+          <div class="price-card">
+            <div class="text-3xl text-terracotta">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+            </div>
+            <h3 class="mt-5 font-display text-xl font-bold text-teal">Tham dự trực tiếp</h3>
+            <p class="mt-3 font-poster text-5xl italic text-terracotta">Miễn phí</p>
+            <p class="mx-auto mt-4 max-w-[16rem] text-sm leading-relaxed text-ink/70">
+              Hai ngày trọn vẹn trên Zoom, dành cho cộng đồng.
+            </p>
+          </div>
+          <!-- Card 2: Recording -->
+          <div class="price-card">
+            <div class="text-3xl text-terracotta">
+              <i class="fa-solid fa-video" aria-hidden="true"></i>
+            </div>
+            <h3 class="mt-5 font-display text-xl font-bold text-teal">Recording sau sự kiện</h3>
+            <p class="mt-3 font-poster text-5xl italic text-terracotta">Tùy tâm</p>
+            <p class="mx-auto mt-4 max-w-[16rem] text-sm leading-relaxed text-ink/70">
+              Số tiền thu được để phục vụ vận hành các hoạt động cộng đồng không thu phí.
+            </p>
+          </div>
+        </div>
+
+        <!-- Final CTA block -->
+        <div class="mt-16 rounded-[28px] bg-peach px-6 py-14 text-center sm:px-12">
+          <h3 class="font-display text-2xl font-bold text-teal sm:text-3xl">
+            Hãy dành cho chính mình một khoảng dừng.
+          </h3>
+          <div class="mt-6 space-y-2 font-poster text-2xl italic text-ink/80 sm:text-3xl">
+            <p>Để chậm lại.</p>
+            <p>Để tự chăm sóc.</p>
+            <p>Để kết nối.</p>
+            <p>Để thêm vững chãi trên hành trình làm cha mẹ đầy ý nghĩa.</p>
+          </div>
+          <p class="mt-6 text-ink/70">Chỉ cần hiện diện, như bạn đang là.</p>
+          <div class="mt-10">
+            <a href="https://luma.com/2partqi8" target="_blank" rel="noopener noreferrer"
+               class="btn-cta px-12 py-5 text-lg">Đăng ký ngay - miễn phí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-teal text-white">
+    <div class="mx-auto max-w-5xl px-5 py-16 sm:px-8">
+
+      <h2 class="font-display text-2xl font-bold">Về dự án Cha Mẹ Trắc Ẩn</h2>
+      <p class="mt-4 max-w-3xl text-white/85 leading-relaxed">
+        Mindful Compassionate Parenting Vietnam (MCP) là chương trình với các thực hành tỉnh thức và trắc ẩn tự thân giúp cha mẹ nhận diện, hiểu và thay đổi các cách phản ứng trong vô thức hoặc phản ứng do căng thẳng gây ra.
+      </p>
+      <p class="mt-4 max-w-3xl text-white/85 leading-relaxed">
+        Chúng tôi tin rằng sự chuyển hóa bền vững bắt đầu từ bên trong - không hướng đến sự hoàn hảo, mà giúp cha mẹ thêm sự tự tin và bình an để có mặt cùng con.
+      </p>
+
+      <!-- Team -->
+      <div class="mt-12">
+        <h3 class="font-display text-xl font-bold">Đội ngũ Cha mẹ trắc ẩn Việt Nam</h3>
+        <p class="mt-1 max-w-3xl text-white/70 text-sm">Ban Tổ Chức Một khoảng dừng.</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+          <div class="text-center">
+            <img src="./images/team-thy-nguyen.png" alt="Thy Nguyễn" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Thy Nguyễn</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-phuong-ngo.png" alt="Phượng Ngô" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Phượng Ngô</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-juliet-pham.jpg" alt="Juliet Phạm" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Juliet Phạm</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-trang-le.jpg" alt="Trang Lê" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Trang Lê</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-anh-bui.png" alt="Anh Bùi" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Anh Bùi</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-hien-tran.jpg" alt="Hiền Trần" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Hiền Trần</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-huong-le.jpg" alt="Hường Lê" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Hường Lê</p>
+          </div>
+          <div class="text-center">
+            <img src="./images/team-virut-ngoc-mai.jpg" alt="Virut Ngọc Mai" loading="lazy"
+                 class="mx-auto h-28 w-28 rounded-full border-2 border-white/40 object-cover object-top shadow-[0_8px_20px_rgba(0,0,0,0.15)]"/>
+            <p class="mt-3 font-display text-sm font-semibold">Virut Ngọc Mai</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="mt-12 flex flex-wrap gap-6 text-sm text-white/75">
+        <a href="mailto:mcpgoesvietnam@gmail.com" class="flex items-center gap-2 hover:text-white transition-colors">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          mcpgoesvietnam@gmail.com
+        </a>
+        <a href="https://www.facebook.com/mcpgoesvietnam" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 hover:text-white transition-colors">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          Cha mẹ Trắc ẩn
+        </a>
+      </div>
+
+      <!-- Partners -->
+      <div class="mt-12 border-t border-white/20 pt-10">
+        <p class="text-sm font-semibold uppercase tracking-wider text-white/50 mb-6">Đối tác đồng hành</p>
+        <div class="flex flex-wrap items-center gap-8">
+          <img src="./images/partner-vus.png" alt="VUS" class="partner-logo h-12 w-auto object-contain" loading="lazy"/>
+          <img src="./images/partner-gumac.png" alt="GUMAC" class="partner-logo h-12 w-auto object-contain" loading="lazy"/>
+          <img src="./images/partner-beone.png" alt="Be One English" class="partner-logo h-12 w-auto object-contain" loading="lazy"/>
+          <img src="./images/partner-tron-lanh.png" alt="Mạng lưới Tròn Lành Việt Nam" class="partner-logo h-12 w-auto object-contain" loading="lazy"/>
+        </div>
+      </div>
+
+      <!-- Media Partners -->
+      <div class="mt-10">
+        <p class="text-sm font-semibold uppercase tracking-wider text-white/50 mb-6">Đối tác truyền thông</p>
+        <div class="flex flex-wrap items-center gap-8">
+          <img src="./images/media-mcp.png" alt="Mindful Compassionate Parenting" class="partner-logo h-14 w-auto object-contain" loading="lazy"/>
+          <img src="./images/media-trac-an-voi-chinh-minh.jpg" alt="Trắc Ẩn với Chính Mình" class="partner-logo h-14 w-auto object-contain rounded-lg" loading="lazy"/>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-12 border-t border-white/20 pt-6 text-xs text-white/40 text-center">
+        © 2026 Cha Mẹ Trắc Ẩn Việt Nam · Mindful Compassionate Parenting Vietnam
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll back to top -->
+  <button id="back-to-top" aria-label="Về đầu trang"
+          class="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-terracotta text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer hover:bg-terracotta-deep"
+          style="pointer-events:none;">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    // ============ SCROLL REVEAL ============
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ============ TESTIMONIAL CAROUSEL ============
+    const track = document.getElementById('carousel-track');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('dots');
+    const totalSlides = slides.length;
+    let current = 0;
+    let autoTimer;
+
+    // Build dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.className = 'h-2 rounded-full transition-all duration-300 cursor-pointer focus:outline-none';
+      dot.style.width = '8px';
+      dot.style.backgroundColor = i === 0 ? '#3B7D73' : 'rgba(59,125,115,0.3)';
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateDots() {
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach((d, i) => {
+        d.style.width = i === current ? '24px' : '8px';
+        d.style.backgroundColor = i === current ? '#3B7D73' : 'rgba(59,125,115,0.3)';
+      });
+    }
+
+    function goTo(n) {
+      current = (n + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      updateDots();
+      resetTimer();
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+
+    function resetTimer() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current + 1), 5500);
+    }
+    resetTimer();
+
+    // Keyboard
+    document.getElementById('testimonials-carousel').addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+
+    // Touch swipe
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+    });
+
+    // ============ BACK TO TOP ============
+    const topBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 400;
+      topBtn.style.opacity = show ? '1' : '0';
+      topBtn.style.pointerEvents = show ? 'auto' : 'none';
+    }, { passive: true });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>

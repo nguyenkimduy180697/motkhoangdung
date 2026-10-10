@@ -114,17 +114,19 @@ export default function Footer() {
             {mediaPartners.map((partner) => (
               <div
                 key={partner.id}
-                className="relative flex h-36 items-center justify-center rounded-2xl bg-white px-6 py-5 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-black/[0.06] transition-all duration-300 hover:-translate-y-1"
+                className="relative flex h-36 items-center justify-center rounded-2xl bg-white px-6 py-5 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-black/[0.06] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  width={240}
-                  height={96}
+                  width={320}
+                  height={140}
                   loading="lazy"
-                  className={`max-h-24 w-auto max-w-[240px] object-contain mix-blend-multiply ${
-                    partner.scale || ''
-                  }`}
+                  className={
+                    partner.id === 'media-trac-an'
+                      ? 'max-h-32 w-auto max-w-[280px] object-contain mix-blend-multiply scale-[1.7] transition-transform duration-300'
+                      : 'max-h-24 w-auto max-w-[240px] object-contain mix-blend-multiply transition-transform duration-300'
+                  }
                 />
               </div>
             ))}

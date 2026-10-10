@@ -1,30 +1,34 @@
-# Deployment
+# Deployment Documentation: Một Khoảng Dừng 2026
 
-## Platform: Cloudflare Workers (Static Assets)
-## URL: https://motkhoangdung.nguyenkimduy.io.vn
-## Fallback / Workers Dev URL: https://motkhoangdung-web.nguyenkimduy-a15.workers.dev
-## Deploy Command: npm run deploy (or `node scripts/build.mjs && wrangler deploy`)
+## Platform
+- **Hosting**: Cloudflare Workers / Assets
+- **Production URL**: https://motkhoangdung.nguyenkimduy.io.vn
+- **Worker Dev URL**: https://motkhoangdung-web.nguyenkimduy-a15.workers.dev
+- **GitHub Repository**: https://github.com/nguyenkimduy180697/motkhoangdung
 
-## Configuration
-- Worker Name: `motkhoangdung-web`
-- Custom Domain: `motkhoangdung.nguyenkimduy.io.vn` (Zone: `nguyenkimduy.io.vn`)
-- Asset Directory: `./dist`
-- Config File: `wrangler.jsonc`
+## Deploy Command
+```bash
+npm run deploy
+```
+*(Chạy `next build` xuất bản tĩnh sang `./dist`, sau đó kích hoạt `wrangler deploy` tải lên Cloudflare)*
 
-## Environment Variables
-- `CLOUDFLARE_API_TOKEN`: Cloudflare API token with Workers Scripts / Assets Edit permission
-- `CLOUDFLARE_ACCOUNT_ID`: `079d9902179021e1b7e9eec4dc419bcb`
+## Environment Configuration
+- Tự động nạp thông qua `resolve_env.py` từ `~/.claude/skills/.env`:
+  - `CLOUDFLARE_API_TOKEN`
+  - `CLOUDFLARE_ACCOUNT_ID`
 
-## CI/CD Pipeline
-- Jenkins URL: https://jenkins.nguyenkimduy.io.vn
-- Job: `motkhoangdung-web`
-- Target: Cloudflare Workers
+## Custom Domain
+- Cấu hình trong `wrangler.jsonc`:
+```jsonc
+"routes": [
+  {
+    "pattern": "motkhoangdung.nguyenkimduy.io.vn",
+    "custom_domain": true
+  }
+]
+```
 
 ## Rollback
-```bash
-wrangler rollback [deployment-id]
-```
-To view deployment history:
-```bash
-wrangler deployments list
-```
+Trong Cloudflare Dashboard:
+1. Vào **Workers & Pages** -> Chọn service **motkhoangdung-web**.
+2. Tab **Deployments** -> Chọn phiên bản trước đó và bấm **Rollback**.

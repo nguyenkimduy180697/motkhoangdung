@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FDF6EF;
+    color: #4A3F35;
+    font-family: var(--font-be-vietnam), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: var(--font-be-vietnam), 'Be Vietnam Pro', sans-serif;
+}
+
+.font-poster {
+  font-family: var(--font-lora), 'Lora', serif;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B85C38;
+  color: #FFFFFF;
+  font-family: var(--font-be-vietnam), 'Be Vietnam Pro', sans-serif;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(184, 92, 56, 0.25);
+}
+
+.btn-cta:hover {
+  background-color: #9A4A2C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 92, 56, 0.35);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+/* Organic blob styling */
+.blob-shape {
+  border-radius: 45% 55% 70% 30% / 45% 45% 60% 55%;
+}
+
+/* Custom scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
